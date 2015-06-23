@@ -14,14 +14,18 @@ def print_user_repository_names():
 
     # I just want to print out the names and descriptions of the repositories..
     # like 'Hackbright-Curriculum: Exercises for the Hackbright Academy Fellowship Program'
-
+   
     repos = github_api_response()
-
+    
+    
     for repo in repos:
-        # I don't think I have these keys right
-        # Also I'd like to print it on one line.
-        print repo['repo_name']
-        print repo['repo_description']
+        repo_name =  repo['name'] 
+        repo_desc = repo['description']
+        print repo_name + "  " + repo_desc
+        
+        
+        
+        #print repo['repo_description']
 
 
 if __name__=="__main__":
